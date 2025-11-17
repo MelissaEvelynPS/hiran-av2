@@ -1,0 +1,123 @@
+/* STYLE DO LOGIN */
+.btn.btn-blue {
+    background-color: #87a7c9; /* azul pastel */
+    border-color: #87a7c9;/* borda na mesma cor */
+    color: #ffffff; /* texto branco */
+}
+.btn.btn-blue:hover {
+    background-color: #7795b5; /* azul mais claro ao passar o mouse */
+    border-color: #7795b5;
+    color: #ffffff; /* texto branco */
+}
+html, body { /* porque tamanho tava me irritando dando scroll dificil de adaptar */
+    height: 100%;
+    margin: 0;
+}
+.page-container { /* ocupa toda tela */
+    display: flex; /* elemento flexivel */
+    flex-direction: column; /* o flexivel são os filhos na vertical */
+    height: 100%; /* ocupa 100% da altura total */
+    overflow: hidden; /* evita scroll se algo passar um pouco */
+}
+.page-content { /* ocupa espaço somente abaixo do menu */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* não dá scroll na tela inteira */
+}
+
+/* STYLE DO SUBMENU */
+.bg-blue {
+    background-color: #87a7c9; /* azul pastel */
+}
+.dropdown-submenu {
+    position: relative; /* pro submenu filho */
+}
+.dropdown-submenu .dropdown-menu { /* pro menu dentro do submenu */
+    top: 0; /* alinha o topo */
+    left: 100%; /* alinha ele à esquerda */
+    margin-left: 0.1rem; /* espaço pra não ficar colado */
+    margin-right: 0.1rem; /* espaço pra não sobrepor */
+}
+
+/* STYLE DO AVISOS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+h2 {
+  color: #004aad;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea, button {
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #004aad;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #00307d;
+}
+
+#listaAvisos {
+  list-style: none;
+  padding: 0;
+}
+
+#listaAvisos li {
+  background-color: #eef3f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 5px solid #004aad;
+}
+
+#listaAvisos button {
+  margin-top: 8px;
+  background-color: #ff4d4d;
+}
+
+#listaAvisos button:hover {
+  background-color: #cc0000;
+}
+
+footer {
+  text-align: center;
+  color: #87a7c9;
+  margin-top: 20px;
+  padding: 10px;
+}

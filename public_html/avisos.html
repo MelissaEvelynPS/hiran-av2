@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- viewport a visão de tela; adapta-se à tela que ta sendo vista e cancela o zoom automatico com telas diferentes -->
+  <title>Agenda de Avisos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Agenda de Avisos</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+    <!-- parte da seção de formulário -->
+      <h2>Novo Aviso</h2>
+      <form id="avisoForm">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" placeholder="Ex: Reunião de equipe" required>
+        <!-- texto simples com placeholder; não pode deixar em branco -->
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" placeholder="Detalhes do aviso" required></textarea>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <label for="destinatario">Destinatário:</label>
+        <input type="text" id="destinatario" placeholder="Ex: Setor de Vendas" required>
+
+        <button type="submit">Adicionar Aviso</button>
+      </form>
+    </section>
+
+    <section class="avisos-section">
+      <h2>Avisos Registrados</h2>
+      <ul id="listaAvisos"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Agenda de Avisos © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- pra não interferir com o html e ter as informações pra ele acessar as coisas tudo -->
+</body>
+</html>
