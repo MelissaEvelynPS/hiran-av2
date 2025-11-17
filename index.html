@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- src do java scrip bootstrap -->
         <script>
-            fetch('submenu.html') //buscar o submenu
+            fetch('public_html/submenu.html') //buscar o submenu
                     .then(resp => resp.text()) //resp é o objeto que o fetch pegou; text() o resp retorna string, que é util em HTML
                     .then(html => document.getElementById('menu').innerHTML = html);
                     /*esse then so vai ser executado depois do arquivo virar string
@@ -20,10 +20,9 @@
                     retorna o elemento ou null se não existir; o ID é unico da página
                     .innerHTML = html => todo o conteudo interno é HTML
                     ao fazer = html, substitui o "<div id="menu"> pelo HTML que a gente puxou*/
-            fetch('rodape.html')
-                    .then(resp => resp.text())
-                    .then(html => document.getElementById('rodape').innerHTML = html);
         </script>
+        <link rel="stylesheet" href="public_html/style.css"> <!-- pro botão de login pegar a mesma cor padrão do site -->
+
     </head>
 
     <body>
@@ -37,15 +36,15 @@
                 <p class="lead">Aqui você pode conhecer mais sobre nossa empresa e aplicativo!</p>
                 <hr>
                 <p>Use o menu acima para navegar entre as páginas.</p>
-                <a href="login.html" class="btn btn-blue">Ir para Login</a>
+                <a href="public_html/login.html" class="btn btn-blue">Ir para Login</a>
             </div>
         </div>
         <!-- RODAPÉ -->
     </body>
 
-    <footer class="bg-blue text-white text-center py-3 fixed-bottom"> <!-- ficar no final da página que FOOTER DE GENTE -->
-        &copy; 2025 Disconnect Sistemas - Todos os direitos reservados
+    <footer class="bg-blue text-white text-center py-3 fixed-bottom"> <!-- FOOTER DE GENTE FINALMENTE-->
+        &copy; 2025 Disconnect Aplicativo - Todos os direitos reservados
     </footer>
-    <script src="script.js"></script>
+    <script src="public_html/script.js"></script>
     <!-- pra não interferir com o html e ter as informações pra ele acessar as coisas tudo -->
 </html>

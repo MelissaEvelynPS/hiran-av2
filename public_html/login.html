@@ -2,13 +2,13 @@
 
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <title>Login</title>
+    <meta charset="utf-8">
+    <title>Login</title>
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-      fetch('submenu.html') //buscar o submenu
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      fetch('public_html/submenu.html') //buscar o submenu
         .then(resp => resp.text()) //resp é o objeto que o fetch pegou; text() o resp retorna string, que é util em HTML
         .then(html => document.getElementById('menu').innerHTML = html);
         /*esse then so vai ser executado depois do arquivo virar string
@@ -18,14 +18,11 @@
         retorna o elemento ou null se não existir; o ID é unico da página
         .innerHTML = html => todo o conteudo interno é HTML
         ao fazer = html, substitui o "<div id="menu"> pelo HTML que a gente puxou*/
-      fetch('rodape.html')
-        .then(resp => resp.text())
-        .then(html => document.getElementById('rodape').innerHTML = html);
-  </script>
-  <link rel="stylesheet" href="style.css">
-
+    </script>
+    <link rel="stylesheet" href="public_html/style.css">
+    
 </head>
-<body class="page-container"> <!-- espacinho legal -->
+<body class="page-container"> <!-- espacinho bacana -->
     <div id="menu"></div>
     <div class="page-content bg-light"> 
         <!-- transforma em flexbox, centraliza horizontal e vertical, altura minima da tela toda -->
@@ -38,7 +35,7 @@
             
         <h1 class="h5 text-center mb-3">Login</h1>
     
-        <form action="principal.html" method="post">
+        <form id="loginForm">
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
             <input type="email" class="form-control" id="email" name="email" required>
@@ -51,5 +48,26 @@
         </form>
         </div>
     </div>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) { //procura no doc um loginForm; quando o usuário apertar o 'submit'; função evento
+        e.preventDefault(); // impede o envio automático
+
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        // LOGIN PERMITIDO
+        const emailPermitido = "funcionario@disconnect.com";
+        const senhaPermitida = "1234";
+
+        if (email === emailPermitido && senha === senhaPermitida) {
+            // login correto → redirecionar
+            window.location.href = "public_html/avisos.html";
+        } else {
+            // login incorreto → alerta
+            alert("E-mail ou senha não cadastrado!");
+        }
+        });
+    </script>        
 </body>
 </html>

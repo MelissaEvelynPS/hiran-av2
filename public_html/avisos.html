@@ -6,7 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- viewport a visão de tela; adapta-se à tela que ta sendo vista e cancela o zoom automatico com telas diferentes -->
   <title>Agenda de Avisos</title>
-  <link rel="stylesheet" href="style.css">
+  <script>
+      fetch('public_html/submenu.html') //buscar o submenu
+        .then(resp => resp.text()) //resp é o objeto que o fetch pegou; text() o resp retorna string, que é util em HTML
+        .then(html => document.getElementById('menu').innerHTML = html);
+        /*esse then so vai ser executado depois do arquivo virar string
+        html é o tipo de string do submenu
+        document.getElementById => documento que representa a página atual
+        procura um elemento HTML que tenha atributo id igual o valor passado, no caso 'menu'
+        retorna o elemento ou null se não existir; o ID é unico da página
+        .innerHTML = html => todo o conteudo interno é HTML
+        ao fazer = html, substitui o "<div id="menu"> pelo HTML que a gente puxou*/
+  </script>
+  <link rel="stylesheet" href="public_html/style.css">
 </head>
 <body>
   <header>
@@ -45,7 +57,7 @@
     <p>Agenda de Avisos © 2025</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="public_html/script.js"></script>
   <!-- pra não interferir com o html e ter as informações pra ele acessar as coisas tudo -->
 </body>
 </html>
