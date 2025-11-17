@@ -83,14 +83,14 @@ input, textarea, button {
 }
 
 button {
-    background-color: #004aad;
+    background-color: #87a7c9;
     color: white;
     cursor: pointer;
     transition: background 0.2s;
 }
 
 button:hover {
-    background-color: #00307d;
+    background-color: #7795b5;
 }
 
 #listaAvisos {
