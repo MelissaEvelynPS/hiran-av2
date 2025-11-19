@@ -1,6 +1,6 @@
 /* STYLE DO SUBMENU */
 .bg-blue {
-    background-color: #87a7c9; /* azul pastel */
+    background-color: #87a7c9; /* azul escuro */
 }
 .dropdown-submenu {
     position: relative; /* pro submenu filho */
@@ -50,7 +50,7 @@ body {
 }
 
 header {
-    background-color: #87a7c9;
+    background-color: #5d6c99;
     color: white;
     text-align: center;
     padding: 1rem;
