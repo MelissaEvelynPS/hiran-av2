@@ -2,15 +2,6 @@
 .bg-blue {
     background-color: #5d6c99; /* azul escuro */
 }
-.dropdown-submenu {
-    position: relative; /* pro submenu filho */
-}
-.dropdown-submenu .dropdown-menu { /* pro menu dentro do submenu */
-    top: 0; /* alinha o topo */
-    left: 100%; /* alinha ele à esquerda */
-    margin-left: 0.1rem; /* espaço pra não ficar colado */
-    margin-right: 0.1rem; /* espaço pra não sobrepor */
-}
     
 /* STYLE DO LOGIN */
 .btn.btn-blue {
