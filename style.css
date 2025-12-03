@@ -9,21 +9,25 @@
     border-color: #87a7c9;/* borda na mesma cor */
     color: #ffffff; /* texto branco */
 }
+
 .btn.btn-blue:hover {
     background-color: #7795b5; /* azul mais claro ao passar o mouse */
     border-color: #7795b5;
     color: #ffffff; /* texto branco */
 }
+
 html, body { /* porque tamanho tava me irritando dando scroll dificil de adaptar */
     height: 100%;
     margin: 0;
 }
+
 .page-container { /* ocupa toda tela */
     display: flex; /* elemento flexivel */
     flex-direction: column; /* o flexivel são os filhos na vertical */
     height: 100%; /* ocupa 100% da altura total */
     overflow: hidden; /* evita scroll se algo passar um pouco */
 }
+
 .page-content { /* ocupa espaço somente abaixo do menu */
     flex: 1;
     display: flex;
